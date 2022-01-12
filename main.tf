@@ -2,10 +2,6 @@ terraform {
   required_version = ">= 0.13.0"
 }
 
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_policy_definition" "definition" {
   name         = local.policy_name
   policy_type  = local.policy_content.properties.policyType
