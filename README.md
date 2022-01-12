@@ -21,7 +21,7 @@ module "policy" {
 
   for_each = toset(local.policy_files)
 
-  policy_file = each.value
+  policy_file = "${var.policy_directory}${each.value}"
 }
 ```
 
