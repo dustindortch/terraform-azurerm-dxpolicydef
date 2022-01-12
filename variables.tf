@@ -5,5 +5,5 @@ variable policy_file {
 
 locals {
   policy_content = jsondecode(file(var.policy_file))
-  policy_name    = split(".", basename(var.policy_file))
+  policy_name    = split(".", basename(var.policy_file))[0]
 }
